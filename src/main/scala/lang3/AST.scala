@@ -17,7 +17,7 @@ object AST {
 
   case class Block(asts: AST*) extends AST
 
-  case class Assign(name: String, value: AST) extends AST
+  case class Assign(name: String, ast: AST) extends AST
   case class DefFun(name: String, args: Seq[String], body: AST) extends AST
 
   sealed trait Expr extends AST
@@ -41,5 +41,6 @@ object AST {
 
   case class VDouble(value: Double) extends Literal
   case class VBool(value: Boolean) extends Literal
+  case object VUnit extends Literal
 
 }

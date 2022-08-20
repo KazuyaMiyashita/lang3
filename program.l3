@@ -1,0 +1,10 @@
+{
+  val a = 1 + 2 * 3
+  function max(a, b) {
+    if (a >= b) a else b
+  }
+  println(a)
+  val b = max(a, 8)
+  println(b)
+}
+

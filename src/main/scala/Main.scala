@@ -1,13 +1,20 @@
+import scala.io.Source
+import lang3.*
+
 object Main {
 
   def main(args: Array[String]): Unit = {
     val input = if (args.length == 1) {
-      args(0)
+      val s = Source.fromFile(args(0))
+      try {
+        s.getLines().mkString("\n")
+      } finally {
+        s.close()
+      }
     } else {
-      throw new IllegalArgumentException("Enter the expression. e.g. \"2 * (3 + 7)\"")
+      throw new IllegalArgumentException("filename required")
     }
-    val result = dentaku.Parser.run(input)
-    println(result)
+    Interpreter.run(Parser.run(input).get)
   }
 
 }

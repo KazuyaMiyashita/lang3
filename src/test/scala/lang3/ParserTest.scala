@@ -89,7 +89,7 @@ class ParserTest extends AnyFlatSpec {
     val expected = {
       import AST.*
       Block(
-        Assign(name = "a", value = VDouble(0.0)),
+        Assign(name = "a", ast = VDouble(0.0)),
         Add(VDouble(1), VDouble(2))
       )
     }
@@ -117,7 +117,7 @@ class ParserTest extends AnyFlatSpec {
         IfExpr(
           expr = Lte(
             lhs = Block(
-              Assign(name = "a", value = VDouble(0.0)),
+              Assign(name = "a", ast = VDouble(0.0)),
               Add(VDouble(1.0), VDouble(2.0))
             ),
             rhs = Block(Call("b"))
@@ -174,7 +174,7 @@ class ParserTest extends AnyFlatSpec {
       Block(
         Assign(
           name = "a",
-          value = Add(VDouble(1), Multi(VDouble(2), VDouble(3)))
+          ast = Add(VDouble(1), Multi(VDouble(2), VDouble(3)))
         ),
         DefFun(
           name = "max",
