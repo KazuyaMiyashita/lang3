@@ -6,5 +6,6 @@ lazy val root = project
     name := "lang3",
     version := "0.1.0-SNAPSHOT",
     scalaVersion := "3.1.3",
+    libraryDependencies += scalaParserCombinators,
     libraryDependencies += scalaTest % Test
   )
