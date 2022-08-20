@@ -1,4 +1,6 @@
-## sbt project compiled with Scala 3
+## lang3
+
+Practice writing a programming language.
 
 ### Usage
 
