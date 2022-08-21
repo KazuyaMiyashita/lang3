@@ -1,0 +1,6 @@
+{
+  function a() {
+    42
+  }
+  println(a())
+}

@@ -1,0 +1,12 @@
+{
+  function acc(v) {
+    if (v <= 100) {
+      v + acc(v + 1)
+  	} else {
+  	  0
+  	}
+  }
+  val sum = acc(1)
+  sum
+}
+

@@ -1,6 +1,5 @@
 package dentaku
 
-import org.scalatest.Tag
 import org.scalatest.funsuite.AnyFunSuite
 
 class ParserTest extends AnyFunSuite {
